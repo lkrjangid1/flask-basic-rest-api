@@ -4,6 +4,9 @@
 # from flask_smorest import abort
 # from db import items, stores
 
+# #python -m venv venv
+# #ctrl+shift+p select interpretor with venv
+
 # app = Flask(__name__)
 
 # @app.get("/store")
@@ -15,12 +18,14 @@
 #     try:
 #         return stores[store_id]
 #     except KeyError:
-#         abort(404, message="store not found")
+#         return {"status":404,"message":"store not found"}
+#         # abort(404, message="store not found")
 
 # @app.post("/store")
 # def createStore():
 #     requestData = request.get_json()
 #     store_id = uuid.uuid4().hex
+#     #https://www.geeksforgeeks.org/args-kwargs-python/
 #     stores[store_id]={**requestData,"id":store_id}
 #     return stores[store_id], 201
 
@@ -58,6 +63,7 @@ from datetime import timedelta
 import secrets
 from flask import Flask
 # from flask_jwt_extended import JWTManager
+# https://flask-restful.readthedocs.io/en/latest/quickstart.html
 from flask_restful import Api
 
 from resources.all_store_resources import AllStoreData

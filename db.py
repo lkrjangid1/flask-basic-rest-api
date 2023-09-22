@@ -1,2 +1,6 @@
 items = {}
-stores = {}
+stores = {
+    "t1":{
+        "name":"test",
+    }
+}
